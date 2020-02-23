@@ -1,0 +1,133 @@
+/* 
+   One-line UI for Vivaldi 2.6
+*/
+
+:root {
+    --space-from-left: 48.4em;
+    /* Main toolbar space - adjust according to your buttonset */
+    --space-from-right: 0em;
+    /* Extension toolbar space - adjust according to your tab bar buttons (cloud, trashbin, ...) */
+}
+
+#titlebar {
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+}
+
+#browser.mac .window-buttongroup {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    margin: 0 1em 0 !important;
+
+}
+
+.button-toolbar {
+    --popupWidth: 200px;
+    --popupLeftOffset: 0px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    max-width: 30px;
+    max-height: 30px;
+    position: relative;
+
+}
+
+.toolbar-mainbar>.button-toolbar>button,
+.toolbar-mainbar>.toolbar-group>.button-toolbar>button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: 0 solid rgba(0, 0, 0, 0);
+    border-radius: 0;
+    min-width: 30px;
+    color: var(--colorFg);
+    padding: 0;
+    height: 30px;
+    border-style: unset;
+}
+
+.toolbar-addressbar {
+    position: fixed !important;
+    /* Set a fixed position for toolbar (before tabs) */
+    top: 0 !important;
+    /* Align it to the top edge */
+    max-height: 30px;
+    margin-left: 6em !important;
+    /* Align to the left (corner) */
+    z-index: 2 !important;
+    /* Make sure autocomplete and overlays work */
+}
+
+.addressfield {
+    height: 22px !important;
+    width: 35em !important;
+    /* Set a fixed width for address bar */
+    position: relative;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    margin: 0 3px 0 2px  !important;
+    border: 1px solid var(--color-bg) !important;
+    background-color: var(--colorBorderIntense) !important;
+    padding: 0px;
+    color: var(--colorFg);
+}
+
+.SiteInfoButton.secure,
+.SiteInfoButton.certified {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.searchfield {
+    display: none
+}
+
+#tabs-container.top {
+    padding-left: var(--space-from-left) !important;
+    z-index: 2 !important;
+    /* Make sure overlays work */
+    padding-top: 0 !important;
+
+}
+#tabs-container > div.toolbar.toolbar-tabbar.toolbar-noflex.sync-and-trash-container{
+    display:none;
+}
+
+#tabs-container .resize {}
+
+#switch {
+    display: flex;
+    flex: 0 0 34px;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--colorBgDark);
+    contain: strict;
+}
+
+.toolbar-mainbar {
+    background-color: var(--color-bg) !important;
+    /* Remove a weird white line below the toolbar */
+}
+
+.toolbar-extensions {
+    display: flex;
+    flex-direction: column;
+    max-height: 30px;
+    position: fixed !important;
+    /* Move the extension toolbar toggle position */
+    right: 0px;
+    background-color: var(--color-bg);
+
+
+}
+.address-top .toolbar-mainbar:after {
+    display: none;
+    /* delete 1px line */
+}

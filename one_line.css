@@ -1,13 +1,10 @@
 /* 
-   One-line UI for Vivaldi 2.6
+   One-line style UI for Vivaldi mac
 */
 
 :root {
     --space-from-left: 48.4em;
     /* Main toolbar space - adjust according to your buttonset */
-    --space-from-right: 0em;
-    /* Extension toolbar space - adjust according to your tab bar buttons (cloud, trashbin, ...) */
-}
 
 #titlebar {
     height: 30px;
@@ -16,13 +13,15 @@
 
 }
 
-#browser.mac .window-buttongroup {
+#browser.mac .window-buttongroup { 
     position: fixed;
     display: flex;
     align-items: center;
     margin: 0 1em 0 !important;
 
 }
+/*Set a fixed positionfor mac system window buttons*/
+
 
 .button-toolbar {
     --popupWidth: 200px;
@@ -100,7 +99,6 @@
     display:none;
 }
 
-#tabs-container .resize {}
 
 #switch {
     display: flex;
@@ -129,5 +127,5 @@
 }
 .address-top .toolbar-mainbar:after {
     display: none;
-    /* delete 1px line */
+    /* Delete 1px line */
 }

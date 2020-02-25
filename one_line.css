@@ -5,6 +5,7 @@
 :root {
     --space-from-left: 48.4em;
     /* Main toolbar space - adjust according to your buttonset */
+}
 
 #titlebar {
     height: 30px;
@@ -13,13 +14,14 @@
 
 }
 
-#browser.mac .window-buttongroup { 
+#browser.mac .window-buttongroup {
     position: fixed;
     display: flex;
     align-items: center;
     margin: 0 1em 0 !important;
 
 }
+
 /*Set a fixed positionfor mac system window buttons*/
 
 
@@ -72,7 +74,7 @@
     flex: 1 1 auto;
     display: flex;
     align-items: center;
-    margin: 0 3px 0 2px  !important;
+    margin: 0 3px 0 2px !important;
     border: 1px solid var(--color-bg) !important;
     background-color: var(--colorBorderIntense) !important;
     padding: 0px;
@@ -95,8 +97,9 @@
     padding-top: 0 !important;
 
 }
-#tabs-container > div.toolbar.toolbar-tabbar.toolbar-noflex.sync-and-trash-container{
-    display:none;
+
+#tabs-container>div.toolbar.toolbar-tabbar.toolbar-noflex.sync-and-trash-container {
+    display: none;
 }
 
 
@@ -125,6 +128,7 @@
 
 
 }
+
 .address-top .toolbar-mainbar:after {
     display: none;
     /* Delete 1px line */

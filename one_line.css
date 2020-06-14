@@ -53,7 +53,10 @@
     height: 30px;
     border-style: unset;
 }
-
+#browser.mac.fullscreen.address-top .toolbar-addressbar{
+    margin-left: 2px !important;
+    /* Align to the left (corner) */
+} 
 .toolbar-addressbar {
     position: fixed !important;
     /* Set a fixed position for toolbar (before tabs) */
@@ -98,14 +101,17 @@
 
 }
 
-#tabs-container>div.toolbar.toolbar-tabbar.toolbar-noflex.sync-and-trash-container {
-    display: none;
-}
-
-
 #switch {
     contain: size;
     /* make extension popup visible on left pane */
+}
+
+#switch button.webviewbtn img,
+.addwebpanel-wrapper button img,
+.addwebpanel-wrapper button svg {
+    background-color: transparent !important;
+    width: 22px !important;
+    height: 22px !important;
 }
 
 .toolbar-mainbar {

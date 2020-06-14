@@ -3,7 +3,7 @@
 */
 
 :root {
-    --space-from-left: 48.4em;
+    --space-from-left: 43.5em;
     /* Main toolbar space - adjust according to your buttonset */
 }
 
@@ -68,7 +68,7 @@
 
 .addressfield {
     height: 22px !important;
-    width: 35em !important;
+    width: 30em !important;
     /* Set a fixed width for address bar */
     position: relative;
     flex: 1 1 auto;
@@ -104,12 +104,8 @@
 
 
 #switch {
-    display: flex;
-    flex: 0 0 34px;
-    flex-direction: column;
-    position: relative;
-    background-color: var(--colorBgDark);
-    contain: strict;
+    contain: size;
+    /* make extension popup visible on left pane */
 }
 
 .toolbar-mainbar {
@@ -118,18 +114,34 @@
 }
 
 .toolbar-extensions {
-    display: flex;
     flex-direction: column;
-    max-height: 30px;
-    position: fixed !important;
-    /* Move the extension toolbar toggle position */
-    right: 0px;
+    /* list extensions toolbar icons in vertical */ 
     background-color: var(--color-bg);
+}
+.toolbar-extensions.toolbar-extensions.toolbar-extensions .button-toolbar > button > img {
+    width: 22px ;
+    height: 22px ;
+    background-color: transparent;
+}
+/* position extension popup */
+.extension-popup {
+    left: 34px !important;
+    top: 15% !important;
+    box-shadow: 0px 0px 10px 2px #00000075;
+}
 
-
+/* remove top arrow from extension popup */
+.extension-popup:before, .extension-popup:after {
+    display: none !important;
 }
 
 .address-top .toolbar-mainbar:after {
     display: none;
     /* Delete 1px line */
+}
+
+.OmniDropdown
+{
+    background: var(--colorBgAlpha);
+    backdrop-filter: blur(10px);
 }
